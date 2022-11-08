@@ -1,0 +1,522 @@
+/*
+Theme Name: Flatsome Child
+Description: This is a child theme for Flatsome Theme
+Author: UX Themes
+Template: flatsome
+Version: 3.0
+*/
+
+/*************** ADD CUSTOM CSS HERE.   ***************/
+.banners-border {
+    border: 5px solid transparent;
+}
+
+.pop_inner{ height: auto;}
+
+.fancybox-slide{ top:5px}
+.dn_inpt{ display:flex; font-size:13px; line-height: 20px; color:#000}
+.full {
+    height: auto !important;
+    transform: none !important;
+    width: 90% !important;  margin:10px 0 44px;     vertical-align: inherit;
+}
+.owl-carousel{ margin-bottom:0px}
+
+.owl-item li{list-style:none; }
+
+.pop_inner p{ margin: 0 0 10px 0;}
+
+.olitem{ margin-right: 0 !important;width:90% !important;margin:18px;border:1px solid #ccc;font-size:13px; background:#fff !important;
+min-height: 470px;}
+.olitem{list-style:none;  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.0); transition: all 0.10s ease 0s; margin-top:0px;}
+.owl-nav .disabled{ display:none;}
+.olitem:hover {
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.3);
+     transition: all 0.10s ease 0s; margin-top:-5px;
+}
+
+.olitem ul li ul{ margin:0}
+#hidden-content {
+  padding: 30px;
+  /*max-width: 500px;*/
+width:70%;
+}
+/*.owl-stage{padding-top:40px;}*/
+.olitem .amount{color: #707070;}
+/*.olitem ul{margin:0px;}*/
+.olitem li button{border-radius: 8px;margin: 0 auto;padding: 5px;width: 90% !important;}
+.olitem .actions{width: 90%;margin: 0 auto;padding: 10px;}.olitem .actions .button{padding: 5px 10px !important; margin:0px;}
+.full{padding:0px;}
+
+
+/**/
+.pop_head {
+    background: #ffffff;
+    padding: 10px 20px;
+}.pop_head h2 {
+    color: #424244;
+    font-family: calibri;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: normal; margin-bottom:0
+    
+}.pop_head h4 {
+    color: #424244;
+    font-family: calibri;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    letter-spacing: 1.5px;
+}.owl-stage {
+    padding-top: 30px;
+}.olitem{ padding:15px}
+
+.owl-carousel .owl-item img {
+    
+    border-bottom: 1px solid #c7c3c3;
+    margin-bottom: 10px;
+}
+
+.olitem h2{ font-size: 15px;
+    font-weight: normal;
+    color: #424244;
+    padding-bottom: 3px;
+}
+.olitem ul {
+    margin: 0px 0 0 12px;
+}.owl-item li {
+    list-style: none;
+    margin-bottom: 3px;
+    font-size: 12px;
+    color: #3a3a3a;
+    font-family: calibri;
+    letter-spacing: 1px;
+}
+.lns_pop_cont ul li{ list-style-type:disc}
+
+.packages-footer2 p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.dmn_img_mobile{display:none;}
+.dnm_cart_section{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.stock_one_class .dnm_crt,.stock_one_class .dnm_crt button{
+    width: 100%;
+}
+
+/*
+.dnm_cart_section .dmn_qnt{width: 35%;float: left;}
+.dnm_cart_section .dnm_crt{float: left;width: 65%;}
+*/
+/*.pop_head{background:#f0f0f0; padding: 10px 20px;}*/
+/*.pop_head h2{ color: #424244;
+    font-family: calibri;
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;}*/
+	
+/*.pop_head h4{ color: #424244;
+    font-family: calibri;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;}*/
+.dmn_lnspro_img{width:100%;float:left;}.dmn_lnspro_rs{float:right;width:30%;}.dmn_lnspro_rs .amount{color: #f25b24;font-size: 16px;}
+	
+.pop_inner{padding:0px 40px 15px; background:#e8e7e6;}
+.dmn_youtb{height:auto;width:100%; margin-bottom: 150px;}
+
+.dmn_youtb_mobile { display: none; }
+.pop_inner .owl-nav{ position: relative;top: -265px;}
+.lns_pop_cont{height:235px;overflow:auto;}
+.owl-prev{   background: #f25b24 !important; color: #fff !important;left: -45px;padding: 10px 15px !important;font-size: 30px !important; position: absolute; text-transform: uppercase;}
+.owl-next{/*position: absolute;right: -40px;background: #f25b24;color: #fff;padding: 17px 6px;text-transform: uppercase;*/
+position: absolute; right: -70px !important; background: #f25b24 !important; color: #fff !important; padding: 10px 15px !important;;text-transform: uppercase;font-size: 30px !important;}
+.fancybox-slide{overflow:inherit !important;}
+/*.owl-carousel .owl-item img{width: 80%;margin: 0 auto;}*/
+
+.lns_container{width:100%;margin-bottom:10px;}
+	.lns_option{/*float: left;line-height: 32px;
+padding: 13px 0px;
+width: 35%;
+background-color: rgba(239, 182, 17, 0.65);
+text-align: left;*/
+float: left;
+line-height: 40px;
+padding: 13px 11px;
+width: 35%;
+background-color: #F0F0F0;
+text-align: left;
+
+
+
+}
+	.dmn_img{width:65%; float:right;}
+
+
+.dn_inpt input[type='radio'] {
+   -webkit-appearance: none;-webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; margin: 5px 10px !important;
+}	
+	
+.dn_inpt input[type='radio']:after {
+        width: 18px;
+        height: 18px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #333;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid #fff;
+    }
+
+.dn_inpt input[type='radio']:checked:after {
+        width: 18px;
+        height: 18px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #be1359;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid #fff;
+    }
+
+.dmn_prescription {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.dmn_prescription .wpcf7-file {
+    padding: 10px;
+    background: #F2B61A;
+}
+#skiptext
+{position: relative;
+top: -75px;
+left: 114px;
+background: #ccc;
+color: #656565;
+border: none;
+text-decoration: underline !important;}
+.dmn_frm_line {font-size:18px;color:#f2b61a;text-align:center}
+
+.fancybox-close-small::after{
+
+background-color: #F25B24 !important;
+color: #fff;
+font-weight: bold !important;
+padding: 5px;
+font-size: 35px;
+padding: 5px;
+width: 40px;
+height: 38px;
+
+}
+
+
+@media (min-width: 769px) and (max-width: 1600px) {  
+
+.full {vertical-align:top !important;}
+
+}
+@media (min-width: 1025px) and (max-width: 1250px) {
+ /*************** ADD laptop ONLY CSS HERE  ***************/ 
+ .full{height: auto !important; transform: none !important;width: 90% !important;margin: 10px 0 44px;}
+
+
+
+  
+}
+@media (min-width: 1281px) and (max-width: 1366px) {
+ /*************** ADD laptop ONLY CSS HERE  ***************/ 
+ .full{height: auto !important;
+transform: none !important;
+width: 90% !important;
+margin: 10px 0 44px;
+
+  
+}
+
+}
+
+ /*************** by manish  ***************/ 
+
+
+
+@media (min-width: 721px){
+
+	.ux-menu .nav-dropdown {
+		min-width: 600px;
+		padding: 0px;
+	}
+
+	.ux-megamenu .nav-dropdown {
+		min-width: 100vw;
+		padding: 0px;
+	}
+
+	.ux-megamenu li.menu-item {
+		width:100%;
+	}
+
+	.container .ux-megamenu .row:not(.row-collapse) {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+
+
+	.ux-menu-callout a {
+		color:#000; 
+	}
+
+	.ux-menu-callout a:hover, .ux-menu-callout a:hover h4   {
+		color:#000; 
+	}
+
+	.ux-menu-callout .icon-box .has-icon-bg .icon .icon-inner {
+		background-color: currentColor;
+	}
+
+	.ux-menu-callout .nav-dropdown .menu-item-has-children>a {
+		text-transform: none; 
+		font-size: 100%;
+	}
+
+	.ux-menu-callout span.widget-title {
+		text-transform: uppercase;
+		font-size:80%;
+		letter-spacing: .05em;
+		opacity: 0.8;
+	}
+
+	.ux-menu-callout ul.menu>li ul {
+		border-left: 0px;
+		padding: 0px 0px 10px 10px;
+	}
+
+	.ux-menu-callout .icon-box-text {
+		padding-top: 5px;
+	}
+
+	.ux-menu-callout h4 {
+		margin-bottom: 0px;
+	}
+
+	.ux-menu-callout p {
+		font-size:80%;
+	}
+
+	.ux-menu-callout .widget .is-divider {
+		margin: 5px 0px;
+		opacity: 0;
+	}
+
+	.ux-menu-callout .widget {
+		margin-bottom: 0px;
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 320px) and (max-width: 768px) { 
+	.full {vertical-align:top !important;top:75px;}
+select, .select2-container .select2-choice, .select2-container .select2-selection{ width:70px}
+.dmn_prescription .wpcf7-file.dmn_prescription .wpcf7-file{width:100%;}
+} 
+
+@media (min-width: 320px) and (max-width: 360px) {
+
+select, .select2-container .select2-choice, .select2-container .select2-selection{ width:70px}
+.dmn_prescription .wpcf7-file.dmn_prescription .wpcf7-file{width:100%;}
+.owl-stage{ padding-top:10px !important}
+.full{ top:0 !important}
+
+}
+
+@media (min-width: 551px) and (max-width: 640px) {
+.fancybox-container{ position:fixed !important}
+select, .select2-container .select2-choice, .select2-container .select2-selection{ width:70px}
+.dmn_prescription .wpcf7-file.dmn_prescription .wpcf7-file{width:100%;}
+.full{ top:0 !important}
+.olitem .actions .button {
+    padding: 5px 5px !important;
+    height: 400px !important;
+	}
+	
+
+}
+
+
+@media (min-width: 641px) and (max-width: 767px) {
+.fancybox-container{ position:absolute !important}
+select, .select2-container .select2-choice, .select2-container .select2-selection{ width:70px}
+.dmn_prescription .wpcf7-file.dmn_prescription .wpcf7-file{width:100%;}
+.full{ top:0% !important}
+.olitem .actions .button {
+    padding: 5px 5px !important;    height: 400px !important;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 48em) {
+/*************** ADD MOBILE ONLY CSS HERE  ***************/
+.single_add_to_cart_button.button.alt {
+    font-size: 11px;padding: 5px 6px;
+}
+
+.full {vertical-align:top !important;top:25px;}
+
+.dmn_frm_line {font-size:18px;color:#f2b61a;text-align:center; display:none;}
+#hidden-content{padding:20px;}
+.fancybox-slide{overflow:auto !important;}
+
+.lns_option{width:100%;}.dmn_img { width: 100%; float: left;}
+.pop_inner {
+    height: inherit;
+}
+.olitem{margin:0 0 15px;width: 100% !important;}
+.pop_head h4{text-align: center;  margin-top: 5px; display:block;}
+.pop_inner p{display:none;}
+.dmn_youtb_mobile{min-height:75px;width:98%; display: block;}
+.dmn_youtb{display: none;}
+.dmn_img{display:none;}
+.absolute-footer .container {margin-left: 0 !important;}
+.copyright-footer{font-size: 10px}
+}
+.fancybox-container { height: auto important; }
+
+
+
+
+/*CSS Added By Bhagwant*/
+.product-info .breadcrumbs {
+    display: none !important;
+}
+.dnm_cart_section .dmn_qnt{
+    
+}
+.dnm_cart_section{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.product-vendor div.shop-page-title {
+    display: none;
+}
+/*CSS Added By Manish*/
+
+.footer-links a {
+    color: #717171 !important;
+}
+.footer-signup-newsletter{
+    height: 30px;
+    margin-top: 10px;
+}
+.absolute-footer{
+	background-color: #fff !important
+}
+.copyright-footer{
+float: left
+}
+/* .frm_fields_container{
+	display: inline-flex !important;
+} */
+.frm_form_field input {
+    background: lightgrey !important;
+}
+.with_frm_style .frm_message, .frm_success_style {
+    margin: 0px 0 0px;
+}
+@media (min-width: 1025px){
+	.rounded-accordion-item{width:70%}
+}
+.footer-links .col-inner a.primary.is-link {
+    width: 100%;
+    text-align: left;
+}
+#footer i.fa {
+    font-size: 25px;
+	padding-left: 5px;
+}
+#footer .social-icons a:first-child {
+    margin-left: 0;
+}
+
+.absolute-footer .container {
+    width: 100% !important;
+    margin-left: 10%;
+}
+#footer .social-icons{
+    margin-left: -0.3em !important;
+}
+.woocommerce-price-suffix{
+	display: none;
+}
+.sidebar-menu .nav-sidebar a {
+    font-size: 1em !important;
+}
+
+.one-rupee {
+    font-weight: 900 !important;
+    font-size: 1.2em;
+}
+.hustle-content-wrap{
+	padding: 0 !important;
+}
+.hustle-info.hustle-info--compact{
+	padding: 0 !important;
+}
+
+.dropdown-menu-item > a {
+	padding: 10px;
+	font-size: 1rem;
+}
+
+.menu-item-font {
+	font-size: 1.1rem;
+}
+
+.menu-item-font  > div {
+	color: #fff;
+	background: #f29a23;
+}

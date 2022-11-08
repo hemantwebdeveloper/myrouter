@@ -1,0 +1,335 @@
+// A $( document ).ready() block.
+jQuery(document).ready(function($) {
+    $(".offer-page-code-button").click(function(event){
+    var $tempElement = $("<input>");
+        $("body").append($tempElement);
+		$(".offer-page-code-button").text('Copy code')
+		$(this).text('Copied');
+		var code=$(this).closest(".offer-page-code").find("u").text().replace(/ /g,'')
+		$tempElement.val(code).select();
+        document.execCommand("Copy");
+		$tempElement.remove();
+    });
+});
+jQuery( document ).ready(function() {
+
+	jQuery('#women-menu-dropdown-link').hover(function(){
+	jQuery('#men-details-dropdown').hide();
+	jQuery('#women-details-dropdown').show();
+	})
+	jQuery('#men-menu-dropdown-link').hover(function(){
+	jQuery('#women-details-dropdown').hide();
+	jQuery('#men-details-dropdown').show();
+	})
+
+
+
+  jQuery('#skiptext').click(function(){
+jQuery('.lens').hide();
+    jQuery('#hidden-content').hide();
+   jQuery('.woocommerce-order-details').show();
+   jQuery('.is-well').show();
+ jQuery('.woocommerce-customer-details').show();
+   
+    jQuery("html, body").animate({ scrollTop: 0 }, "slow");
+    
+  });
+   jQuery('.single_add_to_cart_button').click(function(){
+
+
+    var radio=jQuery('input[name=cd-lens]:checked').val();
+    if(typeof radio === "undefined" ){
+      if ( jQuery( ".lns_option" ).length ) {
+      jQuery('.single_add_to_cart_button').removeClass('loading');
+      alert('Please select lenses');
+      return false;
+    }
+    }else
+    if(radio=='-1'){
+
+    }else{
+    jQuery('.single_add_to_cart_button').removeClass('loading');
+var other_check=jQuery('input[name=cd-lens]:checked').attr('data-hide');
+if(other_check!='yes'){ 
+var pro =jQuery(this).val(); 
+
+
+    setTimeout(function(){   jQuery.ajax({
+        type: "POST",
+        url: flatsomeVars.ajaxurl,
+        data: {action : 'remove_item_from_cart','product_id' : pro},
+        success: function (res) {
+            if (res) {
+                //alert('Removed Successfully');
+            }
+        }
+    }); }, 3000);
+ var fancy=jQuery.fancybox.open({
+       
+          touch: {
+    vertical: false
+  },
+ helpers   : { 
+   overlay : {closeClick: false} // prevents closing when clicking OUTSIDE fancybox 
+  },
+  trapFocus : true,
+        src:  flatsomeVars.ajaxurl +'?action=show_lense&proid='+ pro +'&termid=' +radio,
+         afterLoad  :   function() {
+          jQuery('.fancybox-container').css("height", jQuery(document).height());
+          jQuery('#fancybox-container-2').click(function(){
+return false;
+});
+      var owl= jQuery(".owl-carousel").owlCarousel({
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+    }
+});
+
+    		},
+        
+        type: 'ajax'
+    });
+ 
+// Fix the pause in carousel.
+   var owlh = jQuery('.owl-carousel');
+   // Go to the next item
+  jQuery('.owl-prev').click(function() {
+       owlh.trigger('prev.owl.carousel');
+   });
+
+jQuery('.owl-next').click(function() {
+       owlh.trigger('next.owl.carousel');
+   });
+ 
+
+    return false;	
+    }
+   	}
+   });
+ 
+});
+
+// function add_product_tocart(pid,pids){
+// 	jQuery('#pd' +pid).addClass('loading');
+// var request =jQuery.ajax({
+//   url: flatsomeVars.ajaxurl +'?action=add_product_tocart',
+//   method: "POST",
+//   data: { id : pid ,qpid : pids},
+//   success: function (response) {
+// 	console.log(response);
+//   },
+//  success: function (response) {
+// //   window.location.reload(true);
+// window.location = "https://www.cleardekho.com/cart";
+//       },
+// });
+
+
+// }
+// updated query
+function add_product_tocart(pid,pids){
+	var f_product=pid;
+	var s_product=pids;
+
+  jQuery('#pd' +pid).addClass('loading');
+			     console.log('attributes before ajax time',pid,pids);
+			     console.log('now carts just id');
+
+	var request =jQuery.ajax({
+	  url: flatsomeVars.ajaxurl +'?action=add_product_tocart',
+	  method: "POST",
+	  data: { id : f_product },
+		success: function (response) {
+    console.log("first product");
+			     console.log('attributes first time',pid,pids);
+setTimeout(function(){ 
+	console.log("waiting set timeout")
+	jQuery.ajax({
+	  url: flatsomeVars.ajaxurl +'?action=add_product_tocart',
+	  method: "POST",
+	  data: {id : s_product },
+	 success: function (response) {
+		     console.log("second product");
+		 	console.log('attributes second time',pid,pids);
+
+		 	window.location = "https://www.cleardekho.com/cart";
+		},
+				});	
+}, 500);
+			
+ 							},
+							});
+}
+//  updated query version 1.2
+// function add_product_tocart(button){
+	 		
+
+// 	jQuery('#pd' +button.val()).addClass('loading');
+// 	data={
+// 		'tm-epo-counter': 1,
+// 		tcaddtocart: button.val(),
+// 		quantity: 1,
+// 		product_id: button.val()
+// 	}
+// 	framedata={
+// 		'tm-epo-counter': 1,
+// 		tcaddtocart: button.attr('frame_value'),
+// 		quantity: 1,
+// 		product_id: button.attr('frame_value')
+// 	}
+
+
+//     jQuery.ajax({
+//       type: 'POST',
+//       url: woocommerce_params.wc_ajax_url.toString().replace('%%endpoint%%', 'add_to_cart'),
+//       data: data,
+//       success: function (response) {
+// 		   setTimeout(function(){ 
+// 			  jQuery.ajax({
+// 			  type: 'POST',
+// 			  url: woocommerce_params.wc_ajax_url.toString().replace('%%endpoint%%', 'add_to_cart'),
+// 			  data: framedata,
+// 			  success: function (response) {
+
+// 					if (response.error & response.product_url) {
+// 					  window.location = response.product_url;
+// 					  return;
+// 					}
+
+
+// 		  			window.location = "https://www.cleardekho.com/cart";
+
+
+// 					},	
+// 				});
+
+		  
+// 			if (response.error & response.product_url) {
+// 			  window.location = response.product_url;
+// 			  return;
+// 			}
+
+// 		 }, 500);
+//       },
+//     });
+
+//     return false;
+
+// }
+
+
+jQuery('selector').fancybox({
+	touch: false
+});
+jQuery(".nav-top-not-logged-in").click(function(e){
+e.preventDefault();
+jQuery(".mfp-close").trigger("click")
+ window.location.href="#login"
+setTimeout(function(){  window.location.href="#"},200);
+})
+jQuery(".xoo-el-close").click(function(e){
+ window.location.href="#"
+})
+
+const dropArea = document.querySelector(".drag-area");
+const dragText = dropArea.querySelector("header"),
+button = dropArea.querySelector("button"),
+input = dropArea.querySelector("input");	
+let file; //this is a global variable and we'll use it inside multiple functions
+
+button.onclick = ()=>{
+  input.click(); //if user click on the button then the input also clicked
+}
+
+
+
+
+input.addEventListener("change", function(){
+  //getting user select file and [0] this means if user select multiple files then we'll select only the first one
+  file = this.files[0];
+	console.log("changed");
+  dropArea.classList.add("active");
+  showFile(); //calling function
+});
+
+
+//If user Drag File Over DropArea
+dropArea.addEventListener("dragover", (event)=>{
+  event.preventDefault(); //preventing from default behaviour
+  dropArea.classList.add("active");
+  dragText.textContent = "Drop File to Upload";
+});
+
+//If user leave dragged File from DropArea
+dropArea.addEventListener("dragleave", ()=>{
+  dropArea.classList.remove("active");
+  dragText.textContent = "Drop File to Upload";
+});
+
+//If user drop File on DropArea
+dropArea.addEventListener("drop", (event)=>{
+  event.preventDefault(); //preventing from default behaviour
+  //getting user select file and [0] this means if user select multiple files then we'll select only the first one
+  file = event.dataTransfer.files[0];
+  var reader = new FileReader();
+  jQuery('.wpcf7-file').prop('files',event.dataTransfer.files)
+  
+  reader.readAsDataURL(file);
+  showFile(); //calling function
+});
+
+
+function showFile(){
+  let fileType = file.type; //getting selected file type
+  let validExtensions = ["image/jpeg", "image/jpg", "image/png"]; //adding some valid image extensions in array
+  if(validExtensions.includes(fileType)){ //if user selected file is an image file
+    let fileReader = new FileReader(); //creating new FileReader object
+    fileReader.onload = ()=>{
+      let fileURL = fileReader.result; //passing user file source in fileURL variable
+  	  // UNCOMMENT THIS BELOW LINE. I GOT AN ERROR WHILE UPLOADING THIS POST SO I COMMENTED IT
+      let imgTag = `<img src="${fileURL}" alt="image" style="height: 200px;border: black solid 1px;">`; //creating an img tag and passing user selected file source inside src attribute
+       document.querySelector(".view-image").innerHTML = imgTag; //adding that created img tag inside dropArea container
+    }
+    fileReader.readAsDataURL(file);
+  }else{
+    alert("This is not an Image File!");
+    dropArea.classList.remove("active");
+    dragText.textContent = "Drop File to Upload";
+  }
+}
+
+jQuery('select[name^="CYLRight"]').change(function(){jQuery('select[name^="AXISRight"]').removeAttr("disabled")});
+jQuery('select[name^="CYLLeft"]').change(function(){jQuery('select[name^="AXISLeft"]').removeAttr("disabled")});
+jQuery('.two_pd_check').click(function(){if(jQuery('.pdCheckbox').val()=="false"){jQuery('.td-pd-one').hide();jQuery('.td-pd-two').show();jQuery('.pdCheckbox').val('true')}else{jQuery('.td-pd-one').show();jQuery('.td-pd-two').hide();jQuery('.pdCheckbox').val('false')} });
+var wpcf7Elm = document.querySelector( '.wpcf7' );
+   jQuery(".wpcf7").on('wpcf7:mailsent', function(event){
+
+// wpcf7Elm.addEventListener( 'wpcf7submit', function( event ) {
+//   console.log(event.detail.status)
+// if(event.detail.status=="mail_sent"){
+   jQuery('.lens').hide();
+	  jQuery(".view-image").html('')
+   jQuery('#hidden-content').hide();
+jQuery('.woocommerce-order-details').show();
+   jQuery('.is-well').show();
+ jQuery('.woocommerce-customer-details').show();
+   
+   jQuery("html, body").animate({ scrollTop: 0 }, "slow");
+	  var url = window.location.href;
+var host = window.location.host;
+if(url.indexOf('http://' + host + '/checkout/order-received') == -1) {
+   jQuery('.message-success-prescription').show();
+   setTimeout(function(){window.location.href='http://' + host},2000);
+}
+// }}, false );
+});
